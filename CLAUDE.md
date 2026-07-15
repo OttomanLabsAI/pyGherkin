@@ -1,0 +1,49 @@
+# CLAUDE.md
+
+Guidance for Claude Code (and any AI agent) working in this repository.
+
+## Project
+
+**pyGherkin** is a [pyRevit](https://github.com/eirannejad/pyRevit) extension
+that imports the Geometry Dashboard's CSV exports into a Revit model. The
+extension lives in [`pyGherkin.extension/`](pyGherkin.extension):
+
+- `lib/pygherkin/__init__.py` — shared CSV / units / level / uid-tracking helpers
+- `pyGherkin.tab/` — the ribbon tab (Levels, Floors, Structural: Framing +
+  Connections; Data reserved)
+
+Scripts target pyRevit 4.8+ and must stay IronPython- **and** CPython3-compatible.
+Ribbon panel order is pinned in the `bundle.yaml` `layout:` keys.
+
+## Releasing (push & tag)
+
+When asked to cut a release:
+
+1. Commit the changes and push the branch:
+   ```bash
+   git push -u origin <branch>
+   ```
+2. Pick the new version — see **Versioning** below.
+3. Create an **annotated** tag on the release commit and push it:
+   ```bash
+   git tag -a vX.Y.Z -m "pyGherkin vX.Y.Z"
+   git push origin vX.Y.Z
+   ```
+
+Fallback: if a tag push is rejected (some environments' git proxy returns
+`403 Forbidden` on `refs/tags/*`), create the tag via the GitHub Releases UI
+(Releases → Draft a new release → Choose a tag → type the version → target the
+release commit → Publish) or report the block. Never substitute a branch ref
+(e.g. `refs/heads/v1.0`) for a tag.
+
+## Versioning
+
+Tags are `vMAJOR.MINOR.PATCH`. Current release: **v1.0**.
+
+| Kind of change   | Which number moves        | Pattern   | Example           |
+| ---------------- | ------------------------- | --------- | ----------------- |
+| **Major update** | first number `+1`         | `vX.1.1`  | `v1.2.1 → v2.1.1` |
+| **Smaller update** | middle number `+1`      | `v1.X.1`  | `v1.1.1 → v1.2.1` |
+
+- Major update: increase the **first** number by 1.
+- Smaller update: increase the **middle** number by 1.
