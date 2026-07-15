@@ -12,15 +12,28 @@ pyGherkin tab
 │   └── Import Levels
 ├── Floors
 │   └── Import Floors
-└── Structural
-    ├── Import Framing
-    └── Import Connections
+├── Structural
+│   ├── Import Framing
+│   └── Import Connections
+└── pyGherkin v0.1.0   (Updates panel - titled with the current version)
+    └── Install Update
 ```
 
 Panel order is pinned in `pyGherkin.tab/bundle.yaml` (`layout:` key), so
 `Data` will always sit on the far left once it has content. Revit hides
 ribbon panels that contain no buttons, which is why Data is invisible until
 its first `*.pushbutton` folder is added.
+
+## Updates
+
+The **pyGherkin vX.Y.Z** panel (far right) shows the installed version in its
+title and holds **Install Update**, which **tracks the tip of `main`** in the
+`OttomanLabsAI/pyGherkin` repo (rolling, not tagged releases): it downloads the
+`main` branch and installs it in one go — the live folder is moved to
+`00 - Superseded\pyGherkin\...` (with automatic rollback on failure), then
+pyRevit offers to reload. For a private repo or to avoid API rate limits, set
+`github_token` (and optionally `github_repo`, `github_branch`,
+`update_downloads_folder`) in `%APPDATA%\pyRevit\pyGherkin_settings.json`.
 
 ## Install
 
