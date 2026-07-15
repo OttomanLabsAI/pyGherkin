@@ -1,8 +1,0 @@
-title: Install Update
-tooltip: >-
-  Downloads the newest published pyGherkin.extension from GitHub (latest
-  release, else newest tag, else the default branch) and installs it in one
-  go: the current folder moves to 00 - Superseded\pyGherkin\pyGherkin.extension_<timestamp>,
-  the new version is extracted into place (with automatic rollback if
-  anything fails), then pyRevit offers to reload. Configure 'github_repo' /
-  'github_token' in pyGherkin_settings.json if needed.
