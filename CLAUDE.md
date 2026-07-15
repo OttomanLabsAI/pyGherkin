@@ -44,6 +44,8 @@ Tags are `vMAJOR.MINOR.PATCH`. Current release: **v1.0**.
 | ---------------- | ------------------------- | --------- | ----------------- |
 | **Major update** | first number `+1`         | `vX.1.1`  | `v1.2.1 → v2.1.1` |
 | **Smaller update** | middle number `+1`      | `v1.X.1`  | `v1.1.1 → v1.2.1` |
+| **Minor change** | last number `+1`          | `v1.1.X`  | `v1.1.1 → v1.1.2` |
 
 - Major update: increase the **first** number by 1.
 - Smaller update: increase the **middle** number by 1.
+- Minor change: increase the **last** number by 1.
