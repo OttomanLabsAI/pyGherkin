@@ -64,7 +64,7 @@ VERSION_FILE = os.path.join(EXT_ROOT, "version.txt")
 
 
 def get_local_version():
-    """Contents of <extension root>/version.txt (e.g. 'v1.0'), or '' when
+    """Contents of <extension root>/version.txt (e.g. 'v0.1.0'), or '' when
     the file is missing."""
     try:
         with open(VERSION_FILE, "r") as f:

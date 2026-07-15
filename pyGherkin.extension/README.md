@@ -15,7 +15,7 @@ pyGherkin tab
 ├── Structural
 │   ├── Import Framing
 │   └── Import Connections
-└── pyGherkin v1.0   (Updates panel - titled with the current version)
+└── pyGherkin v0.1.0   (Updates panel - titled with the current version)
     └── Install Update
 ```
 

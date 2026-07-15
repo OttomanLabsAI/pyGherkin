@@ -21,7 +21,7 @@ Ribbon panel order is pinned in the `bundle.yaml` `layout:` keys.
 ## Update system (Install Update button)
 
 The `Updates` panel (`pyGherkin.tab/Updates.panel/`) is titled with the current
-version (e.g. **`pyGherkin v1.0`**) and holds the **Install Update** button. It
+version (e.g. **`pyGherkin v0.1.0`**) and holds the **Install Update** button. It
 fetches the newest published `pyGherkin.extension` from GitHub (latest release,
 else newest tag, else the default branch), compares it to `version.txt`, then
 supersedes the live folder and extracts the new one, with automatic rollback on
@@ -58,11 +58,12 @@ Fallback: if a tag push is rejected (some environments' git proxy returns
 `403 Forbidden` on `refs/tags/*`), create the tag via the GitHub Releases UI
 (Releases → Draft a new release → Choose a tag → type the version → target the
 release commit → Publish) or report the block. Never substitute a branch ref
-(e.g. `refs/heads/v1.0`) for a tag.
+(e.g. `refs/heads/v0.2.0`) for a tag.
 
 ## Versioning
 
-Tags are `vMAJOR.MINOR.PATCH`. Current release: **v1.0**.
+Tags are `vMAJOR.MINOR.PATCH` (3-part). Current version marker
+(`version.txt` + Updates panel title): **v0.1.0**; next milestone tag: **v0.2.0**.
 
 | Kind of change   | Which number moves        | Pattern   | Example           |
 | ---------------- | ------------------------- | --------- | ----------------- |
